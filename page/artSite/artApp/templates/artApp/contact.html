@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+    {% block main-content %}
+    <section id="contact">
+        <fieldset>
+            <form action="/js/app.js" method="post">
+                <input type="text" name="Name" id="user" placeholder="Name">
+                <input type="email" name="Email" id="email" placeholder="Email">
+                <input type="text" id="comment" placeholder="Whats on your mind">
+                <input type="button" value="Send">
+            </form>
+        </fieldset>
+    </section>
+    {% endblock %}
+    {% include "footer.html" %}
+    </body>
+</html>
