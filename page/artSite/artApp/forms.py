@@ -1,9 +1,14 @@
 from django import forms
+from .models import ArtModel
 
-class UserRegistrationForm(forms.Form):
-    email = forms.CharField(max_length=150)
-    password = forms.CharField(widget=forms.PasswordInput)
-    password_confirm = forms.CharField(widget=forms.PasswordInput, label="Confirm Password")
+
+class UserRegistrationForm(forms.ModelForm):
+    class Meta:
+        model = ArtModel
+        fields =  [
+            'email',
+            'password'
+        ]
 
     def clean(self):
         cleaned_data = super().clean()
