@@ -1,13 +1,17 @@
 {% extends 'artApp/base.html' %}
+{% load static %}
 
    {% block main-content %}
    <article>
-        <header>
+        <header>b
             <h1>
                 About Us
             </h1>
         </header>
         <section>
+            <div class = 'profile'>
+                <img src="{% static "./images/Profile-image" %}" alt="profile" id="profile">
+            </div>
             Born on May 11, 1904, in Figueres, Spain, Salvador Dalí was a highly skilled artist known for his eccentric behavior and dramatic work. 
             His work often explored themes of dreams, death, and decay, and he was heavily influenced by psychoanalysis. 
             Dalí became a leading figure of the Surrealist movement, which sought to express the unconscious mind through art.

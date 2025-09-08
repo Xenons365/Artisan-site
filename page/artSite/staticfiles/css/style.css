@@ -1,0 +1,32 @@
+.header{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    position: sticky;
+    height: auto;
+}
+.header:hover{
+    color: black;
+
+}
+a.header{
+    padding: 10px;
+    margin: 10px;
+}
+a.header:hover{
+    color: aliceblue;
+}
+#logo{
+    width: 150px;
+    border-radius: 150px;
+    margin-left: -100px;
+}
+#chart{
+    width: 150px;
+    border-radius: 150px;
+    margin-right: -100px;
+}
+#home-image{
+    border-radius: 100px;
+    
+}
