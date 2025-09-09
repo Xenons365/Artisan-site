@@ -32,14 +32,17 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    #Myapps
+    'artApp.apps.ArtappConfig',
+    'LoginSignup.apps.LoginsignupConfig',
+    #Defaultapps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #Myapp
-    'artApp.apps.ArtappConfig',
+
 ]
 
 MIDDLEWARE = [

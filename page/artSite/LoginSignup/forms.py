@@ -1,10 +1,10 @@
 from django import forms
-from .models import ArtModel
+from .models import LoginModel
 
 
 class UserRegistrationForm(forms.ModelForm):
     class Meta:
-        model = ArtModel
+        model = LoginModel
         fields =  [
             'email',
             'password'

@@ -1,0 +1,19 @@
+{% extends "LoginSignup/base.html" %}
+{% load static %}
+
+{% block main-block %}
+    <fieldset>
+        <div class="form">
+            <form method="POST">
+                {{ form.as_p }} 
+                {% csrf_token %}
+                <input type="email" name="email" id="email" placeholder="Email">
+                <input type="password" name="password" id="password" placeholder="Password">
+                <input type="button" value="Signup">
+            </form>
+            I already have an account <a href="{% url "login" %}">Login</a>
+        </div>
+    </fieldset>
+{% endblock main-block %}
+
+{% include "LoginSignup/footer.html" %}

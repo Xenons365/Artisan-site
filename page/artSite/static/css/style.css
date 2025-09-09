@@ -13,9 +13,6 @@ a.header{
     padding: 10px;
     margin: 10px;
 }
-a.header:hover{
-    color: aliceblue;
-}
 #logo{
     width: 150px;
     border-radius: 150px;
