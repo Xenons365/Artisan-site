@@ -1,32 +1,35 @@
-.header{
+body {
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
-    margin: auto;
-    position: sticky;
-    height: auto;
+    background-color: white;
 }
-.header:hover{
-    color: black;
 
-}
-a.header{
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px;
     padding: 10px;
-    margin: 10px;
+    position: sticky;
 }
-a.header:hover{
-    color: aliceblue;
-}
+
 #logo{
-    width: 150px;
-    border-radius: 150px;
-    margin-left: -100px;
+    width: 15px;
+    border-radius: 15px;
 }
 #chart{
-    width: 150px;
-    border-radius: 150px;
-    margin-right: -100px;
+    width: 15px;
+    border-radius: 15px;
+    
 }
-#home-image{
-    border-radius: 100px;
+.image-home{
+    border: 30px;
+    padding: 10px;
+    border-radius:  25px;
+    
+}
+.gallery{
     
 }

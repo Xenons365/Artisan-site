@@ -4,7 +4,7 @@ from .forms import *
 
 # Create your views here.
 def signup_view(request):
-    form = UserRegistrationForm(request.Post)
+    form = UserRegistrationForm(request.POST)
     if form.is_valid:
         form.save()
     context = {
@@ -13,7 +13,7 @@ def signup_view(request):
     return render(request, 'LoginSignup/signup.html', context)
 
 def login_view(request):
-    form = UserRegistrationForm(request.Post)
+    form = UserRegistrationForm(request.POST)
     if form.is_valid:
         form.save()
     context = {
