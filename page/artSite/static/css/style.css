@@ -1,129 +1,127 @@
-.body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+/* General styles */
+body {
+    font-family: sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    height: 100vh;
-    overflow-x: hidden;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
 }
 
-/* Header and Navbar */
-header {
-    background-color: #fff;
-    padding: 10px 40px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    position: sticky;
-}
-
-.nav-bar {
+/* Navbar */
+.navbar {
+    background-color: #333;
+    color: #fff;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 20px;
 }
 
-#logo {
-    height: 50px;
-    border-radius: 150px;
+.navbar-brand a {
+    color: #fff;
+    text-decoration: none;
 }
 
-.nav-bar .links {
-    list-style: none;
+.navbar-nav {
     display: flex;
+    list-style: none;
     margin: 0;
     padding: 0;
-    align-items: center;
 }
 
-.nav-bar .links li {
-    margin-left: 25px;
+.nav-item {
+    margin-left: 20px;
 }
 
-.nav-bar .links a {
+.nav-link {
+    color: #fff;
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    font-size: 16px;
-}
-
-.nav-bar .links a:hover {
-    color: #0056b3;
-}
-
-/* Main Content Area */
-article, .gallery, section {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 20px auto;
-    background-color: #fff;
-    border-radius: 8px;
-}
-
-/* Home Page Specifics */
-.image-home img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 80px;
-}
-
-/* Note: your HTML has id="shoping", which might be a typo for "shopping" */
-#shoping { 
-    background-color: #007bff;
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-    display: block;
-    width: fit-content;
-    margin: 20px auto;
-}
-
-#shoping:hover {
-    background-color: #0056b3;
-}
-
-/* Gallery Styles */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 15px;
-}
-
-.gallery img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    transition: transform 0.2s;
-}
-
-.gallery img:hover {
-    transform: scale(1.05);
-}
-
-/* About Page */
-#profile {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    float: left;
-    margin: 0 20px 10px 0;
-    border: 3px solid #ddd;
 }
 
 /* Footer */
-footer {
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
     text-align: center;
-    padding: 40px 20px;
-    margin-top: 40px;
-    background-color: #343a40;
+}
+
+/* Hero section */
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+/* Container */
+.container {
+    padding: 20px;
+}
+
+/* About page */
+.about-content {
+    display: flex;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-text {
+    flex: 2;
+    padding-left: 20px;
+}
+
+/* Contact page */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+button,
+.btn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Gallery page */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+}
+
+/* Login/Signup forms */
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
 }

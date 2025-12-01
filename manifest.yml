@@ -1,0 +1,7 @@
+---
+applications:
+- name: art-site
+  random-route: true
+  memory: 128M
+  buildpack: python_buildpack
+  command: gunicorn --workers=1 --timeout=90 artSite.wsgi

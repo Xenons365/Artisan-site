@@ -1,7 +1,35 @@
-{% extends 'base.html' %}
+{% extends "artApp/base.html" %}
 {% load static %}
-    {% block main-content %}
-        
-    {% endblock main-content %}
-    
 
+{% block main-content %}
+<section class="hero-section">
+    <div class="hero-content">
+        <h1>Welcome to the Art Site</h1>
+        <p>Discover amazing artworks from talented artists around the world.</p>
+        <a href="{% url 'gallery' %}" class="btn btn-primary">Explore Gallery</a>
+    </div>
+</section>
+
+<section class="featured-artworks">
+    <div class="container">
+        <h2 class="section-title">Featured Artworks</h2>
+        <div class="artwork-grid">
+            <div class="artwork-item">
+                <img src="{% static 'images/image1.jpg' %}" alt="Artwork 1">
+                <h3>Artwork Title 1</h3>
+                <p>Artist Name</p>
+            </div>
+            <div class="artwork-item">
+                <img src="{% static 'images/image2.jpg' %}" alt="Artwork 2">
+                <h3>Artwork Title 2</h3>
+                <p>Artist Name</p>
+            </div>
+            <div class="artwork-item">
+                <img src="{% static 'images/image3.jpg' %}" alt="Artwork 3">
+                <h3>Artwork Title 3</h3>
+                <p>Artist Name</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock main-content %}
