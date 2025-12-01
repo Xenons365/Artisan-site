@@ -1,25 +1,32 @@
 {% extends 'artApp/base.html' %}
 {% load static %}
-       {% block main-content %}
-               <aside>
-            <div class="image-home">
-                <img src="{% static "./images/homeimage.jpeg" %}" alt="mainArt">
-            </div>
-       </aside>
-       <article id="home-article">
-            <h3>
-                    This is a paragraph
-            </h3>
-            <section>
-               This striking image is "The Burning Giraffe," a famous oil painting by the Spanish Surrealist master Salvador Dalí, created in 1937.
 
-The painting is a powerful allegory of war and decay, created while the Spanish Civil War was raging. Dalí's work is deeply influenced by the psychoanalytic theories of Sigmund Freud, which is most evident in the two female figures with open drawers protruding from their bodies. These drawers symbolize the hidden secrets and subconscious desires of the human mind, which can only be revealed through psychoanalysis.
+{% block main-content %}
+<section class="hero">
+    <div class="hero-image">
+        <img src="{% static "images/homeimage.jpeg" %}" alt="mainArt">
+    </div>
+    <div class="hero-text">
+        <h1>Welcome to ArtSite</h1>
+        <p>Discover the world of art</p>
+    </div>
+</section>
 
-The prominent figure is propped up by crutch-like objects, a recurring motif in Dalí's work that represents decay and a form of artificial support. The burning giraffe in the background, a symbol Dalí referred to as a "masculine cosmic apocalyptic monster," serves as a chilling premonition of the global conflict that was soon to erupt in World War II.
-
-This piece is an excellent example of Surrealism's core principles—using dream-like imagery and irrational juxtapositions to explore the inner world and challenge conventional reality.
-            </section>
-            
-       </article>
-       <button type="button" id="shoping">Shop now</button>
-       {% endblock main-content %}
+<section class="container">
+    <article class="home-article">
+        <h3>This is a paragraph</h3>
+        <p>
+            This striking image is "The Burning Giraffe," a famous oil painting by the Spanish Surrealist master Salvador Dalí, created in 1937.
+        </p>
+        <p>
+            The painting is a powerful allegory of war and decay, created while the Spanish Civil War was raging. Dalí's work is deeply influenced by the psychoanalytic theories of Sigmund Freud, which is most evident in the two female figures with open drawers protruding from their bodies. These drawers symbolize the hidden secrets and subconscious desires of the human mind, which can only be revealed through psychoanalysis.
+        </p>
+        <p>
+            The prominent figure is propped up by crutch-like objects, a recurring motif in Dalí's work that represents decay and a form of artificial support. The burning giraffe in the background, a symbol Dalí referred to as a "masculine cosmic apocalyptic monster," serves as a chilling premonition of the global conflict that was soon to erupt in World War II.
+        </p>
+        <p>
+            This piece is an excellent example of Surrealism's core principles—using dream-like imagery and irrational juxtapositions to explore the inner world and challenge conventional reality.
+        </p>
+    </article>
+</section>
+{% endblock main-content %}
