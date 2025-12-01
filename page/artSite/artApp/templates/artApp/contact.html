@@ -1,18 +1,24 @@
 {% extends 'artApp/base.html' %}
 {% load static %}
-    {% block main-content %}
-    <section id="contact">
-        <fieldset>
-            <form action="/js/app.js" method="post">
-                {% csrf_token %}
-                <input type="text" name="Name" id="user" placeholder="Name">
-                <input type="email" name="Email" id="email" placeholder="Email">
-                <input type="text" id="comment" placeholder="Whats on your mind">
-                <input type="button" value="Send">
-            </form>
-        </fieldset>
-    </section>
-    {% endblock %}
-    {% include "footer.html" %}
-    </body>
-</html>
+
+{% block main-content %}
+<section class="container">
+    <h1>Contact Us</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="Name" id="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="Email" id="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" rows="5" placeholder="What's on your mind" required></textarea>
+        </div>
+        <button type="submit">Send</button>
+    </form>
+</section>
+{% endblock main-content %}

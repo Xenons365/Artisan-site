@@ -1,26 +1,23 @@
+{% extends 'artApp/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-        <script src="app.js" async defer></script>
-    </head>
-    <body>
-            <div class="form">
-                <form method="post">
-                    {{ form.as_p }}
-                    {% csrf_token %}
-                    <input type="email" name="email" id="email" placeholder="Email">
-                    <input type="password" name="password" id="password" placeholder="Password">
-                    <input type="button" value="login">
-                </form>
-                I dont have an account <a href="signup.html">Sign In</a>
+
+{% block main-content %}
+<section class="container">
+    <div class="form-container">
+        <h1>Login</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="Enter your username">
             </div>
-            {% include "footer.html" %}
-    </body>
-</html>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter your password">
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="{% url 'signup' %}">Sign up</a></p>
+    </div>
+</section>
+{% endblock main-content %}

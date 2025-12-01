@@ -1,21 +1,38 @@
-{% extends 'artApp/base.html' %}
+{% extends "artApp/base.html" %}
 {% load static %}
-       {% block main-content %}
-       <picture class="gallery">
-            <div class="content">
-                <aside>
-                    <img src="{% static "./images/image1.jpg" %}" alt="image1" id="left">
-                    <img src="{% static "./images/image2.jpg" %}" alt="image2" id="right">
-                </aside>
+{% block main-content %}
+<section class="gallery-section">
+    <div class="container">
+        <h2 class="section-title">Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="{% static 'images/image1.jpg' %}" alt="Artwork 1">
             </div>
-            <img src="{% static "./images/image3.jpg" %}" alt="image3">
-            <img src="{% static "./images/image4.jpg" %}" alt="image4">
-            <img src="{% static "./images/image5.jpg" %}" alt="image5">
-            <img src="{% static "./images/#art#basquiat#newyorkart.jpeg" %}" alt="image6">
-            <img src="{% static "./images/51ce2fdf-28c3-4498-939f-e1dd9c84e992.jpeg" %}" alt="image7">
-            <img src="{% static "./images/A vibrant piece of art inspired by Jean-Michel….jpeg" %}" alt="image8">
-            <img src="{% static "./images/c36dad9b-0e98-4a5d-9c42-e989c7c9e927.jpeg" %}" alt="image9">
-            <img src="{% static "./images/Graffiti Inspired Portrait Headshot inspired by….jpeg" %}" alt="image10">
-            <img src="{% static "./images/This painting in the style of Basquiat depicts a….jpeg" %}" alt="image11">
-       </picture>
-       {% endblock main-content %}
+            <div class="gallery-item">
+                <img src="{% static 'images/image2.jpg' %}" alt="Artwork 2">
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'images/image3.jpg' %}" alt="Artwork 3">
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'images/image4.jpg' %}" alt="Artwork 4">
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'images/image5.jpg' %}" alt="Artwork 5">
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'images/image1.jpg' %}" alt="Artwork 6">
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'images/image2.jpg' %}" alt="Artwork 7">
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'images/image3.jpg' %}" alt="Artwork 8">
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'images/image4.jpg' %}" alt="Artwork 9">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock main-content %}
