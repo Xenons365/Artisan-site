@@ -1,14 +1,14 @@
-{% extends "LoginSignup/base.html" %}
-{% load static %}
-{% block main-block %}
-    <div class="form">
-        <form method="post">
-            {% csrf_token %}
-            <input type="email" name="email" id="email" placeholder="Email">
-            <input type="password" name="password" id="password" placeholder="Password">
-            <input type="button" value="login">
-        </form>
-            I dont have an account <a href="{% url "signup" %}">Sign In</a>
-    </div> 
-{% endblock main-block %}
-{% include "LoginSignup/footer.html" %}
+{% extends "artApp/base.html" %}
+{% block main-content %}
+<div class="form-container">
+    <h2>Login</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn">Login</button>
+    </form>
+    <p class="form-link">
+        Don't have an account? <a href="{% url "signup" %}">Sign Up</a>
+    </p>
+</div>
+{% endblock main-content %}
